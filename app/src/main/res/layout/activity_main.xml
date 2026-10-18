@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:orientation="vertical"
     android:padding="48dp">
+
+    <Button
+        android:id="@+id/addLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_link" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/appGrid"
@@ -11,4 +18,4 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:padding="8dp" />
-</FrameLayout>
+</LinearLayout>

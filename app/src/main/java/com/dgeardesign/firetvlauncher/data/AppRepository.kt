@@ -3,8 +3,10 @@ package com.dgeardesign.firetvlauncher.data
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.widget.Toast
 import com.dgeardesign.firetvlauncher.models.AppInfo
+import com.dgeardesign.firetvlauncher.models.Website
 import com.dgeardesign.firetvlauncher.utils.AppFilter
 
 /** Handles discovering installed apps and launching them. */
@@ -47,6 +49,16 @@ class AppRepository(private val context: Context) {
             context.startActivity(app.launchIntent)
         } catch (e: Exception) {
             Toast.makeText(context, "Unable to launch ${app.label}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /** Opens the URL in the default browser; shows a toast if none can handle it. */
+    fun openWebsite(site: Website) {
+        try {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(site.url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "Unable to open ${site.title}", Toast.LENGTH_SHORT).show()
         }
     }
 }

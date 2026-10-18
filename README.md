@@ -7,15 +7,18 @@ no ads, no recommendations, just a grid of your installed apps.
 - Discovers installed apps (TV and regular launchable apps)
 - Grid of icons + names with a clear focus highlight
 - D-pad / remote navigation; select launches the app
+- **Website shortcuts** mixed into the same grid (blue tile + `LINK` badge); opened in the default browser
+- **+ Add website** button; long-press (hold select) a website tile to edit or remove it
+- Shortcuts stored in `websites.json` in the app's files dir; seeded with YouTube, Netflix, Google
 - Registers as a HOME app (can be chosen as the default launcher)
 
 ## Structure
 ```
 app/src/main/java/com/dgeardesign/firetvlauncher/
-├── models/  AppInfo            – data for one app tile
-├── data/    AppRepository      – app discovery and launching
+├── models/  AppInfo, LauncherItem, Website – data for grid tiles
+├── data/    AppRepository (apps, browser launch), WebsiteStore (JSON storage)
 ├── ui/      MainActivity, MainViewModel, AppAdapter
-└── utils/   AppFilter          – sorting/filtering helpers
+└── utils/   AppFilter, WebsiteLinks – sorting/filtering, URL cleanup, JSON
 ```
 
 ## Requirements
