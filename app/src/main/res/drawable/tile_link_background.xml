@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Website tiles: blue-tinted fill with an accent outline so they differ from app tiles. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/link_tile_focused" />
+            <stroke android:width="4dp" android:color="@color/text" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/link_tile" />
+            <stroke android:width="4dp" android:color="@color/accent" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</selector>

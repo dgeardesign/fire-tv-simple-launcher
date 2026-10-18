@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
-    android:padding="32dp">
+    android:padding="48dp">
 
     <Button
         android:id="@+id/addLink"
@@ -12,9 +13,9 @@
         android:text="@string/add_link" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/grid"
+        android:id="@+id/appGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingTop="16dp" />
+        android:padding="8dp" />
 </LinearLayout>
