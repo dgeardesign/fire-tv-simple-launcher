@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Simple Launcher</string>
+    <string name="add_link">+ Add website</string>
+    <string name="link_title">Title</string>
+    <string name="link_url">URL (e.g. https://youtube.com)</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="invalid_url">Enter a valid http(s) URL</string>
+    <string name="cannot_open">Unable to open this item</string>
+    <string name="link_badge">LINK</string>
+</resources>
